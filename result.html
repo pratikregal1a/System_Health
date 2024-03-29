@@ -1,0 +1,1790 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>System Health Status</title>
+<style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+		.tooltip .tooltiptext {
+		  visibility: hidden;
+		  width: fit-content;
+		  background-color: black;
+		  color: #fff;
+		  text-align: center;
+		  border-radius: 6px;
+		  padding: 5px 0;
+
+		  /* Position the tooltip */
+		  position: absolute;
+		  z-index: 1;
+		}
+
+		.tooltip:hover .tooltiptext {
+		  visibility: visible;
+		}
+       
+        .scrollable {
+            width: 100%;
+            max-height: 150px;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            display: block;
+            white-space: pre-line
+        }
+    </style>
+<script src="https://code.jquery.com/jquery-3.5.1.js">
+</script>
+<script src="history.json">
+</script>
+</head>
+<body>
+<header>
+<h1>System Health Status</h1>
+</header>
+<div class="container">
+<table id="health_table"><thead><tr><th>Machine Name</th><th class="tooltip">System Health <span class="tooltiptext">echo hello</span></th><th class="tooltip">Number of OAMs <span class="tooltiptext">"C:\Program Files\Git\bin\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe ListApu | grep Found"</span></th><th class="tooltip">OAM 1 Device State <span class="tooltiptext">"C:\Program Files\Git\bin\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=1 | grep \"HSP State\" | awk '{print $3}'"</span></th><th class="tooltip">OAM 2 Device State <span class="tooltiptext">"C:\Program Files\Git\bin\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=2 | grep \"HSP State\" | awk '{print $3}'"</span></th><th class="tooltip">OAM 3 Device State <span class="tooltiptext">"C:\Program Files\Git\bin\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=3 | grep \"HSP State\" | awk '{print $3}'"</span></th><th class="tooltip">OAM 4 Device State <span class="tooltiptext">"C:\Program Files\Git\bin\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=4 | grep \"HSP State\" | awk '{print $3}'"</span></th><th class="tooltip">OAM 1 HSP State <span class="tooltiptext">"C:\Program Files\Git\bin\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=1 | grep Security | awk '{print $4}'"</span></th><th class="tooltip">OAM 2 HSP State <span class="tooltiptext">"C:\Program Files\Git\bin\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=2 | grep Security | awk '{print $4}'"</span></th><th class="tooltip">OAM 3 HSP State <span class="tooltiptext">"C:\Program Files\Git\bin\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=3 | grep Security | awk '{print $4}'"</span></th><th class="tooltip">OAM 4 HSP State <span class="tooltiptext">"C:\Program Files\Git\bin\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=4 | grep Security | awk '{print $4}'"</span></th></tr></thead><tbody><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1408" target="_blank">DCAL112159B1408</a><span class="tooltiptext">DCAL112159B1408.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1408" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1408" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe ListApu | grep Found"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1408" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=1 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1408" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=2 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1408" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=3 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1408" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=4 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1408" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=1 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1408" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=2 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1408" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=3 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1408" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=4 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1411" target="_blank">DCAL112159B1411</a><span class="tooltiptext">DCAL112159B1411.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1411" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1411" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe ListApu | grep Found"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+bash: /C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe: No such file or directory
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1411" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+bash: /C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe: No such file or directory</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1411" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+bash: /C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe: No such file or directory</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1411" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+bash: /C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe: No such file or directory</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1411" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+bash: /C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe: No such file or directory</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1411" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+bash: /C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe: No such file or directory</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1411" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+bash: /C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe: No such file or directory</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1411" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+bash: /C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe: No such file or directory</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1411" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+bash: /C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe: No such file or directory</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1414" target="_blank">DCAL112159B1414</a><span class="tooltiptext">DCAL112159B1414.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1414" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1414" target="_blank">Found 4 APU devices</a></div><span class="tooltiptext scrollable">Found 4 APU devices
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:07,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="12472" Tid="16120" TS="0x01DA818DBA745075" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1414" target="_blank">ReadyToLoadMmc</a></div><span class="tooltiptext scrollable">ReadyToLoadMmc
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:09,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="15968" Tid="12580" TS="0x01DA818DBB3CAE78" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1414" target="_blank">ReadyToLoadMmc</a></div><span class="tooltiptext scrollable">ReadyToLoadMmc
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:10,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="16132" Tid="18552" TS="0x01DA818DBC10DD0C" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1414" target="_blank">ReadyToLoadMmc</a></div><span class="tooltiptext scrollable">ReadyToLoadMmc
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:11,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="16516" Tid="17876" TS="0x01DA818DBCDB8250" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1414" target="_blank">ReadyToLoadMmc</a></div><span class="tooltiptext scrollable">ReadyToLoadMmc
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:13,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="15672" Tid="15408" TS="0x01DA818DBDAA14BD" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1414" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:14,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="20328" Tid="19756" TS="0x01DA818DBE74BA00" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1414" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:15,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="19708" Tid="17820" TS="0x01DA818DBF3CFD01" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1414" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:17,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="15352" Tid="14256" TS="0x01DA818DC00A04D3" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1414" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:18,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="14388" Tid="6848" TS="0x01DA818DC0D70C31" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1427" target="_blank">DCAL112159B1427</a><span class="tooltiptext">DCAL112159B1427.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1427" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1427" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe ListApu | grep Found"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+bash: /C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe: No such file or directory
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1427" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+bash: /C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe: No such file or directory</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1427" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+bash: /C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe: No such file or directory</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1427" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+bash: /C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe: No such file or directory</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1427" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+bash: /C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe: No such file or directory</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1427" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+bash: /C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe: No such file or directory</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1427" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+bash: /C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe: No such file or directory</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1427" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+bash: /C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe: No such file or directory</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1427" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+bash: /C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe: No such file or directory</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1430" target="_blank">DCAL112159B1430</a><span class="tooltiptext">DCAL112159B1430.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1430" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1430" target="_blank">Found 4 APU devices</a></div><span class="tooltiptext scrollable">Found 4 APU devices
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:09,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="14204" Tid="7996" TS="0x01DA818DBB76A22E" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1430" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:11,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="14368" Tid="12628" TS="0x01DA818DBCB87D7C" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1430" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:13,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="7652" Tid="13504" TS="0x01DA818DBE03A464" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1430" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:16,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="5272" Tid="7236" TS="0x01DA818DBF48EB04" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1430" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:18,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="6740" Tid="8380" TS="0x01DA818DC08E02A8" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1430" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:20,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="7668" Tid="14848" TS="0x01DA818DC1D676BB" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1430" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:22,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="11808" Tid="9428" TS="0x01DA818DC31D14FB" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1430" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:24,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="9060" Tid="12896" TS="0x01DA818DC45FB583" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1430" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:26,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="8008" Tid="14852" TS="0x01DA818DC5A8CF25" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1436" target="_blank">DCAL112159B1436</a><span class="tooltiptext">DCAL112159B1436.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1436" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1436" target="_blank">Found 4 APU devices</a></div><span class="tooltiptext scrollable">Found 4 APU devices
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:10,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="13080" Tid="8436" TS="0x01DA818DBBFF35A8" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1436" target="_blank">ReadyToLoadSprt</a></div><span class="tooltiptext scrollable">ReadyToLoadSprt
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:12,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="8560" Tid="10036" TS="0x01DA818DBD448474" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1436" target="_blank">ReadyToLoadSprt</a></div><span class="tooltiptext scrollable">ReadyToLoadSprt
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:15,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="8424" Tid="9760" TS="0x01DA818DBEC6E6F8" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1436" target="_blank">ReadyToLoadSprt</a></div><span class="tooltiptext scrollable">ReadyToLoadSprt
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:17,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="12336" Tid="7668" TS="0x01DA818DC033D8D8" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1436" target="_blank">ReadyToLoadSprt</a></div><span class="tooltiptext scrollable">ReadyToLoadSprt
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:19,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="13660" Tid="10552" TS="0x01DA818DC19BDBD3" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1436" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:22,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="13920" Tid="6264" TS="0x01DA818DC3017C8B" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1436" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:24,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="14208" Tid="13888" TS="0x01DA818DC4671E55" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1436" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:26,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="13104" Tid="12628" TS="0x01DA818DC5C7F94D" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1436" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:29,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="6108" Tid="13840" TS="0x01DA818DC7305AC3" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1627" target="_blank">DCAL112159B1627</a><span class="tooltiptext">DCAL112159B1627.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1627" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1627" target="_blank">Found 4 APU devices</a></div><span class="tooltiptext scrollable">Found 4 APU devices
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:23,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="9836" Tid="12504" TS="0x01DA818DC3D4D828" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1627" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:25,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="13968" Tid="10172" TS="0x01DA818DC4E0903E" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1627" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:27,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="8884" Tid="8056" TS="0x01DA818DC5E6A01E" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1627" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:28,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="15892" Tid="15484" TS="0x01DA818DC6DF8A04" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1627" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:30,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="8404" Tid="14364" TS="0x01DA818DC7E112A8" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1627" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:31,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="12528" Tid="14784" TS="0x01DA818DC8C49939" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1627" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:33,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="16668" Tid="16948" TS="0x01DA818DC9AABE7D" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1627" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:35,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="16428" Tid="7108" TS="0x01DA818DCA96D08B" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1627" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:36,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="15576" Tid="9152" TS="0x01DA818DCB868195" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1630" target="_blank">DCAL112159B1630</a><span class="tooltiptext">DCAL112159B1630.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1630" style="color: red" target="_blank">Down</a></div><span class="tooltiptext scrollable">Exception
+
+[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1630" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1630" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1630" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1630" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1630" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1630" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1630" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1630" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1630" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1633" target="_blank">DCAL112159B1633</a><span class="tooltiptext">DCAL112159B1633.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1633" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1633" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe ListApu | grep Found"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1633" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=1 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1633" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=2 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1633" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=3 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1633" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=4 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1633" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=1 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1633" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=2 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1633" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=3 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1633" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=4 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1636" target="_blank">DCAL112159B1636</a><span class="tooltiptext">DCAL112159B1636.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1636" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1636" target="_blank">Found 4 APU devices</a></div><span class="tooltiptext scrollable">Found 4 APU devices
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:07,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="19472" Tid="19584" TS="0x01DA818DBA5FF513" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1636" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:08,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="15664" Tid="15168" TS="0x01DA818DBAFFB077" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1636" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:09,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="5168" Tid="19704" TS="0x01DA818DBBAB580D" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1636" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:11,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="9432" Tid="19396" TS="0x01DA818DBC4ECF0C" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1636" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:12,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="6004" Tid="14160" TS="0x01DA818DBD02311C" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1636" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:13,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="13208" Tid="9360" TS="0x01DA818DBDA4668E" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1636" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:14,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="12792" Tid="6944" TS="0x01DA818DBE4422A1" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1636" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:15,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="15616" Tid="19096" TS="0x01DA818DBEE3DE54" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL112159B1636" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:16,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="16204" Tid="14040" TS="0x01DA818DBF86176F" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0205" target="_blank">DCAL111064K0205</a><span class="tooltiptext">DCAL111064K0205.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0205" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0205" target="_blank">Found 4 APU devices</a></div><span class="tooltiptext scrollable">Found 4 APU devices
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:06,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="22384" Tid="20808" TS="0x01DA818DB9C61F7D" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0205" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:07,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="18780" Tid="21700" TS="0x01DA818DBA33CA53" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0205" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:08,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="20228" Tid="20684" TS="0x01DA818DBAAAFF3D" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0205" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:09,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="11028" Tid="15820" TS="0x01DA818DBB18AA9F" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0205" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:09,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="17312" Tid="17520" TS="0x01DA818DBB8655B4" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0205" target="_blank">Production</a></div><span class="tooltiptext scrollable">Production
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:10,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="20016" Tid="21268" TS="0x01DA818DBBEF3C44" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0205" target="_blank">Production</a></div><span class="tooltiptext scrollable">Production
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:11,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="19848" Tid="18604" TS="0x01DA818DBC5CE77E" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0205" target="_blank">Production</a></div><span class="tooltiptext scrollable">Production
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:11,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="22584" Tid="17668" TS="0x01DA818DBCCA92BE" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0205" target="_blank">Test</a></div><span class="tooltiptext scrollable">Test
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:12,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="19828" Tid="13284" TS="0x01DA818DBD337949" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0208" target="_blank">DCAL111064K0208</a><span class="tooltiptext">DCAL111064K0208.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0208" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0208" target="_blank">Found 4 APU devices</a></div><span class="tooltiptext scrollable">Found 4 APU devices
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:07,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="16948" Tid="14708" TS="0x01DA818DBA403C61" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0208" target="_blank">ReadyToLoadSprt</a></div><span class="tooltiptext scrollable">ReadyToLoadSprt
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:08,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="12172" Tid="1888" TS="0x01DA818DBAD8D14A" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0208" target="_blank">ReadyToLoadSprt</a></div><span class="tooltiptext scrollable">ReadyToLoadSprt
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:09,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="14320" Tid="11072" TS="0x01DA818DBBA38094" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0208" target="_blank">ReadyToLoadSprt</a></div><span class="tooltiptext scrollable">ReadyToLoadSprt
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:11,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="8908" Tid="5948" TS="0x01DA818DBC64CA06" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0208" target="_blank">ReadyToLoadSprt</a></div><span class="tooltiptext scrollable">ReadyToLoadSprt
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:12,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="12256" Tid="14092" TS="0x01DA818DBD1A0B56" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0208" target="_blank">Production</a></div><span class="tooltiptext scrollable">Production
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:13,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="8328" Tid="15564" TS="0x01DA818DBDD19F31" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0208" target="_blank">Production</a></div><span class="tooltiptext scrollable">Production
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:14,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="15888" Tid="15948" TS="0x01DA818DBE86D001" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0208" target="_blank">Production</a></div><span class="tooltiptext scrollable">Production
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:15,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="14288" Tid="16144" TS="0x01DA818DBF3CD5BA" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0208" target="_blank">Production</a></div><span class="tooltiptext scrollable">Production
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:17,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="17156" Tid="13736" TS="0x01DA818DBFF1B890" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0211" target="_blank">DCAL111064K0211</a><span class="tooltiptext">DCAL111064K0211.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0211" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0211" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe ListApu | grep Found"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0211" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=1 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0211" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=2 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0211" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=3 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0211" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=4 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0211" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=1 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0211" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=2 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0211" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=3 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0211" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=4 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0214" target="_blank">DCAL111064K0214</a><span class="tooltiptext">DCAL111064K0214.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0214" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0214" target="_blank">Found 4 APU devices</a></div><span class="tooltiptext scrollable">Found 4 APU devices
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:07,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="24528" Tid="15396" TS="0x01DA818DBA526FDB" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0214" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:09,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="26252" Tid="23300" TS="0x01DA818DBB24769B" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0214" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:10,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="27828" Tid="17360" TS="0x01DA818DBC314DFF" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0214" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:12,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="18872" Tid="28360" TS="0x01DA818DBD3EB587" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0214" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:14,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="28040" Tid="28156" TS="0x01DA818DBE49C958" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0214" target="_blank">Test</a></div><span class="tooltiptext scrollable">Test
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:16,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="19000" Tid="23984" TS="0x01DA818DBF55334F" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0214" target="_blank">Production</a></div><span class="tooltiptext scrollable">Production
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:17,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="17388" Tid="23480" TS="0x01DA818DC0604839" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0214" target="_blank">Production</a></div><span class="tooltiptext scrollable">Production
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:19,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="6580" Tid="24836" TS="0x01DA818DC1696B28" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0214" target="_blank">Production</a></div><span class="tooltiptext scrollable">Production
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:21,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="20340" Tid="17856" TS="0x01DA818DC276D2DB" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0227" target="_blank">DCAL111064K0227</a><span class="tooltiptext">DCAL111064K0227.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0227" style="color: red" target="_blank">Down</a></div><span class="tooltiptext scrollable">Exception
+
+[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0227" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0227" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0227" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0227" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0227" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0227" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0227" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0227" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0227" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0230" target="_blank">DCAL111064K0230</a><span class="tooltiptext">DCAL111064K0230.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0230" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0230" target="_blank">Found 4 APU devices</a></div><span class="tooltiptext scrollable">Found 4 APU devices
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/29/2024 12:01:10,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="1984" Tid="1908" TS="0x01DA818DBBCE0C12" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0230" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/29/2024 12:01:12,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="17620" Tid="17508" TS="0x01DA818DBD360EF3" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0230" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/29/2024 12:01:15,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="19792" Tid="12388" TS="0x01DA818DBECB5E44" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0230" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/29/2024 12:01:17,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="9748" Tid="9108" TS="0x01DA818DC0631065" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0230" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/29/2024 12:01:20,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="15104" Tid="17504" TS="0x01DA818DC1FD25D8" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0230" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/29/2024 12:01:23,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="19692" Tid="1940" TS="0x01DA818DC3931A7D" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0230" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/29/2024 12:01:25,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="15340" Tid="11460" TS="0x01DA818DC52F9239" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0230" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/29/2024 12:01:28,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="2004" Tid="5020" TS="0x01DA818DC6C9A55B" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0230" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/29/2024 12:01:31,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="18876" Tid="7920" TS="0x01DA818DC85C9254" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0233" target="_blank">DCAL111064K0233</a><span class="tooltiptext">DCAL111064K0233.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0233" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0233" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe ListApu | grep Found"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0233" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=1 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0233" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=2 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0233" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=3 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0233" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=4 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0233" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=1 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0233" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=2 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0233" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=3 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0233" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=4 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0236" target="_blank">DCAL111064K0236</a><span class="tooltiptext">DCAL111064K0236.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0236" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0236" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe ListApu | grep Found"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0236" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=1 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0236" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=2 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0236" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=3 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0236" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=4 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0236" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=1 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0236" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=2 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0236" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=3 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064K0236" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=4 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0605" target="_blank">DVCL111064L0605</a><span class="tooltiptext">DVCL111064L0605.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0605" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0605" target="_blank">Found 4 APU devices</a></div><span class="tooltiptext scrollable">Found 4 APU devices
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:09,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="8924" Tid="11836" TS="0x01DA818DBB1E0DEB" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0605" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:10,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="1956" Tid="10268" TS="0x01DA818DBC39C579" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0605" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:12,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="9556" Tid="8760" TS="0x01DA818DBD731498" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0605" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:14,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="6316" Tid="11756" TS="0x01DA818DBE9D510A" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0605" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:16,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="5620" Tid="12568" TS="0x01DA818DBFB82A90" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0605" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:18,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="8328" Tid="13300" TS="0x01DA818DC0D54B0E" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0605" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:20,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="5244" Tid="10096" TS="0x01DA818DC1EC4387" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0605" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:22,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="5236" Tid="9612" TS="0x01DA818DC30595A9" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0605" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:24,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="12328" Tid="12972" TS="0x01DA818DC423AD61" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0608" target="_blank">DVCL111064L0608</a><span class="tooltiptext">DVCL111064L0608.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0608" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0608" target="_blank">Found 1 APU devices</a></div><span class="tooltiptext scrollable">Found 1 APU devices
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:08,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="7192" Tid="13372" TS="0x01DA818DBA8C3B43" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0608" target="_blank">Error</a></div><span class="tooltiptext scrollable">Error
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:09,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="12824" Tid="13540" TS="0x01DA818DBB69EAD0" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0608" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:11,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="9572" Tid="13244" TS="0x01DA818DBC4F9A36" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0608" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:12,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="15908" Tid="17056" TS="0x01DA818DBD32E377" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0608" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:14,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="16036" Tid="14008" TS="0x01DA818DBE15AFD5" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0608" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:15,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="12276" Tid="15352" TS="0x01DA818DBEFA8B97" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0608" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:17,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="11308" Tid="6640" TS="0x01DA818DBFDD09C7" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0608" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:18,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="15480" Tid="14404" TS="0x01DA818DC0BFDE9B" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0608" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:19,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="14276" Tid="15244" TS="0x01DA818DC19E51E2" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0611" target="_blank">DCAL111064L0611</a><span class="tooltiptext">DCAL111064L0611.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0611" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0611" target="_blank">Found 1 APU devices</a></div><span class="tooltiptext scrollable">Found 1 APU devices
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:17,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="11912" Tid="11336" TS="0x01DA818DBFDC45FF" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0611" target="_blank">Running</a></div><span class="tooltiptext scrollable">Running
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:19,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="5772" Tid="12592" TS="0x01DA818DC127B7FC" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0611" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:21,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="11196" Tid="10104" TS="0x01DA818DC28BD891" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0611" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:23,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="5376" Tid="10012" TS="0x01DA818DC3E0321F" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0611" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:25,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="12168" Tid="12628" TS="0x01DA818DC532C0AE" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0611" target="_blank">Test</a></div><span class="tooltiptext scrollable">Test
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:28,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="12644" Tid="11208" TS="0x01DA818DC6835E99" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0611" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:30,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="9368" Tid="13132" TS="0x01DA818DC7D621A6" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0611" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:32,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="12896" Tid="13164" TS="0x01DA818DC9292E73" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0611" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/28/2024 21:01:34,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="13068" Tid="11440" TS="0x01DA818DCA7BB115" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0627" target="_blank">DCAL111064L0627</a><span class="tooltiptext">DCAL111064L0627.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0627" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0627" target="_blank">Found 2 APU devices</a></div><span class="tooltiptext scrollable">Found 2 APU devices
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/29/2024 12:01:18,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="5588" Tid="5968" TS="0x01DA818DC08C1DE5" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0627" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/29/2024 12:01:20,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="9596" Tid="6552" TS="0x01DA818DC1C45DF3" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0627" target="_blank">Error</a></div><span class="tooltiptext scrollable">Error
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/29/2024 12:01:22,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="12388" Tid="7584" TS="0x01DA818DC34AD4FA" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0627" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/29/2024 12:01:25,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="6652" Tid="8992" TS="0x01DA818DC4D1F3C7" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0627" target="_blank">ReadyToLoadMmc</a></div><span class="tooltiptext scrollable">ReadyToLoadMmc
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/29/2024 12:01:27,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="5400" Tid="11288" TS="0x01DA818DC651FB1B" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0627" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/29/2024 12:01:30,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="12120" Tid="12328" TS="0x01DA818DC7CD358F" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0627" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/29/2024 12:01:32,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="10508" Tid="6668" TS="0x01DA818DC94B09D2" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0627" target="_blank"></a></div><span class="tooltiptext scrollable">
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/29/2024 12:01:34,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="9736" Tid="4596" TS="0x01DA818DCA86BDDA" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0627" target="_blank">Secure</a></div><span class="tooltiptext scrollable">Secure
+
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+e,03/29/2024 12:01:37,Common,ConfigurationFileReader,SrcFile="ConfigurationFileReader.cpp" SrcFunc="apsdk::configuration::ConfigurationFileReader::ReadPlainConfiguration" SrcLine="51" Pid="5596" Tid="7284" TS="0x01DA818DCC067CA2" String1="AgentConfig.ini: unable to open the configuration file (2)"</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0630" target="_blank">DCAL111064L0630</a><span class="tooltiptext">DCAL111064L0630.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0630" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0630" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe ListApu | grep Found"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0630" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=1 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0630" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=2 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0630" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=3 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0630" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=4 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0630" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=1 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0630" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=2 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0630" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=3 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DCAL111064L0630" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=4 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td></tr><tr><td class="tooltip"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0633" target="_blank">DVCL111064L0633</a><span class="tooltiptext">DVCL111064L0633.redmond.corp.microsoft.com</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0633" style="color: green" target="_blank">Alive</a></div><span class="tooltiptext scrollable">hello
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0633" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe ListApu | grep Found"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0633" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=1 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0633" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=2 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0633" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=3 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0633" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=4 | grep \\"HSP State\\" | awk \'{print $3}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0633" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=1 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0633" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=2 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0633" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=3 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td><td class="tooltip"><div class="scrollable"><a href="C:/Users/ajchaudhary/pythia.tsk.ares/health_check/health.html?system=DVCL111064L0633" style="color: red" target="_blank">Exception</a></div><span class="tooltiptext scrollable">Exception
+
+Encountered a bad command exit code!
+
+Command: '"C:\\Program Files\\Git\\bin\\bash.exe" -i -c "/C/FSE/Recipe.ev2-l4b20/dependency/apu_mgmt_tools/Tools/ApuMgmt.exe Info -device=4 | grep Security | awk \'{print $4}\'"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+The system cannot find the path specified.
+
+</span></td></tr></tbody></table>
+</div>
+</body>
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    system = urlParams.get('system')
+    console.log(system);
+    console.log(urlParams.get(history_json.length));
+    if (system != null && system in history_json){
+        console.log(history_json)
+        // Create Table Head
+        html_table = "<thead><tr><th>"+system+"\n date time</th>"
+        for (command in history_json[system][0]['commands_result']){
+            html_table += "<th class=\"tooltip\"  >"+history_json[system][0]['commands_result'][command]['command name']+ "<span class=\"tooltiptext\">"+history_json[system][0]['commands_result'][command]['command']+"</span></th>"
+        }
+        html_table += "</tr></thead><tbody></tbody></table>"
+        // Create Table
+        
+        for (execution in history_json[system]){
+            html_table += "<tr><td class=\"tooltip\" >"+history_json[system][execution]['datetime']+"<span class=\"tooltiptext\">"+history_json[system][execution]['system ip']+"</span></td>"
+            for (res in history_json[system][execution]['commands_result']){
+                style = ''
+                if (history_json[system][execution]['commands_result'][res]['match_found'] == 1){
+                    style = 'style = "color: green"'
+                }
+                if (history_json[system][execution]['commands_result'][res]['match_found'] == 2 || history_json[system][execution]['commands_result'][res]['result'] == 'Exception'){
+                    style = 'style = "color: red"'
+                }
+                html_table += "<td class=\"tooltip\""+style+"><div class='scrollable'>"+history_json[system][execution]['commands_result'][res]['result']+"</div><span class=\"tooltiptext scrollable\">"+history_json[system][execution]['commands_result'][res]['raw result']+"</span></td>"
+            }
+            html_table += "</tr>"
+        }
+        html_table += "</tbody>"
+        var mytable = document.getElementById("health_table") ;
+        mytable.innerHTML = html_table 
+    }
+</script>
+</html>
